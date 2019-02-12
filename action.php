@@ -14,12 +14,21 @@
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['sum'])) {
     func();
 }
+function factorial($n)
+{
+    if ($n == 0) {
+        return 1;
+    } else {
+        return $n * factorial($n - 1);
+    }
+}
 function func() {
     $a = (int)$_POST['a'];
     $b = (int)$_POST['b'];
     $c = $a + $b;
-    $cString = "Сумма чисел равна " . (string)$c;
-    echo $cString;
+    $factorial = factorial($c);
+    $outString = "Сумма чисел равна " . (string)$c . ". Её факториал равен " . (string)$factorial . ".";
+    echo $outString;
 }
 ?>
 </body>
