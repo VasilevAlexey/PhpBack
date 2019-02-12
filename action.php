@@ -26,8 +26,12 @@ function func() {
     $a = (int)$_POST['a'];
     $b = (int)$_POST['b'];
     $c = $a + $b;
-    $factorial = factorial($c);
-    $outString = "Сумма чисел равна " . (string)$c . ". Её факториал равен " . (string)$factorial . ".";
+    $fOut = ".";
+    if ($c >= 0) {
+        $factorial = factorial($c);
+        $fOut =  ". Её факториал равен " . (string)$factorial . ".";
+    }
+    $outString = "Сумма чисел равна " . (string)$c . $fOut;
     echo $outString;
 }
 ?>
