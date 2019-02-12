@@ -18,7 +18,8 @@ function func() {
     $a = (int)$_POST['a'];
     $b = (int)$_POST['b'];
     $c = $a + $b;
-    echo $c;
+    $cString = "Сумма чисел равна " . (string)$c;
+    echo $cString;
 }
 ?>
 </body>
