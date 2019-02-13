@@ -5,7 +5,7 @@
     <title> test </title>
 </head>
 <body>
-<form action="action.php" method="post">
+<form action="actionsApi.php" method="post">
     <p>первое число: <input type="text" name="a" /></p>
     <p>второе число: <input type="text" name="b" /></p>
     <p><input type="submit" name="sum" value="GO" /></p>
